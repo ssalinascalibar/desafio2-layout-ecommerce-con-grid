@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+h2, h3{
+    font-weight: 700;
+}
+
+span{
+    font-weight: 300;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-areas: 'navbar navbar' 'aside main' 'footer footer';
+}
+
+/* Navbar */
+nav{
+    grid-area: navbar;
+    background-color: #000;
+    color: #e1e1e1;
+    text-align: center;
+    padding: 1.5rem 0;
+}
+
+/* Barra lateral con categorías */
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    background-color: #e1e1e1;
+    
+}
+
+aside h2{
+    margin-bottom: 1rem;
+}
+
+aside p{
+    color: #34495E;
+}
+
+.category{
+    padding: 1rem 2rem;
+}
+
+/* Grilla con productos */
+main{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: #e1e1e1;
+    padding: 1rem 1rem;
+    gap: 15px;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: center;
+    gap: 15px;
+    background-color: #fff;
+}
+
+.card img{
+    width: 100%;
+}
+
+button{
+    background-color: #566573;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+/* pie de página */
+footer{
+    grid-area: footer;
+    background-color: #000;
+    color: #e1e1e1;
+    text-align: center;
+    padding: 1.5rem 0;
+
+}
